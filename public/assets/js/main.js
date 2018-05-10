@@ -51,7 +51,7 @@ $(function() {
         if(data.username===$('#userName').val()){
             $messages.append(("<li class='mymessage'><span class='mymessageTxt'>" + data.message + "</span></li>"));
         }else{
-            $$messages.append(("<li><span class='userName'>" + data.username + "</span><span class='messageTxt'>" + data.message + "</span></li>"));
+            $messages.append(("<li><span class='userName'>" + data.username + "</span><span class='messageTxt'>" + data.message + "</span></li>"));
         }
     });
 });
