@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Socket.IO chat</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="./assets/css/index.css" media="all" />
+    </head>
+    <body>
+        <div class="loginPage">
+            <form action="" class="loginName">
+                <div class="form">
+                   <h3 class="title">What's your nickname?</h3>
+                   <input class="usernameInput" id="userName" type="text" maxlength="14" />
+                </div>
+            </form>
+        </div>
+        <duv class="chatPage">
+            <ul id="messages"></ul>
+            <div class="form-area">
+                <form action="" class="inputMessage">
+                  <input class="inputMessage" id="messageTxt" autocomplete="off" placeholder="Type here..." /><button><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                </form>
+            </div>
+        </duv>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script src="./assets/js/main.js"></script>
+    </body>
+</html>

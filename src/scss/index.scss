@@ -1,0 +1,194 @@
+@charset "utf-8";
+
+@import "_common";
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font: 13px Helvetica, Arial; }
+
+/* Login Page */
+
+.loginPage {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+    position: absolute;
+}
+.loginPage{
+    .form{
+        height: 100px;
+        margin-top: -100px;
+        position: absolute;
+        text-align: center;
+        top: 50%;
+        width: 100%;
+        .title{
+            font-size: 200%;
+            color: #000;
+            font-weight: 100;
+            @include sp{
+                font-size: 170%;
+            }
+        }
+        .usernameInput{
+            font-size: 200%;
+            color: #000;
+            letter-spacing: 2px;
+            font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #000;
+            outline: none;
+            text-align: center;
+            width: 400px;
+            font-weight: 100;
+            @include sp{
+                font-size: 170%;
+                width: 80%;
+                width: 80%;
+                -webkit-appearance: none;
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+/* chat Page */
+
+.chatPage{
+    display: none;
+}
+.form-area{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #fff;
+    padding-bottom: 18px;
+    z-index: 1;
+}
+.inputMessage {
+    padding: 7px 3px;
+    width: 94%;
+    border: 2px solid rgba(160,160,162,.7);
+    border-radius: .375rem;
+    margin: auto;
+    font-size: 15px;
+}
+.inputMessage input {
+    border: 0;
+    padding: 10px;
+    width: 96%;
+    margin-right: .5%;
+    background-color: #fff;
+    font-size: 15px;
+    outline: none;
+    @include sp{
+        width: 90%;
+        padding: 0 3%;
+        font-size: 16px;
+    }
+}
+.inputMessage button {
+    text-align: right;
+    border: none;
+    font-size: 24px;
+    color: rgba(160, 160, 162, 0.7);
+    vertical-align: middle;
+    outline: none;
+    background: none;
+    @include sp{
+
+    }
+}
+#messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 100px;
+}
+#messages li {
+    position: relative;
+    padding-top: 20px;
+    margin-top: 20px;
+    @include sp{
+        padding-top: 5.5%;
+        margin-top: 7%;
+    }
+    &.mymessage{
+        text-align: right;
+        margin-top: 0;
+        @include sp{
+            padding-top: 7%;
+        }
+    }
+    .userName{
+        position: absolute;
+        margin-left: 3%;
+        padding-left: 40px;
+        top: 2px;
+        @include sp{
+            padding-left: 8%;
+        }
+        &:after{
+            font-family: FontAwesome;
+            content : "\f2c0";
+            position: absolute;
+            left: 8px;
+            font-size: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #6fb0ce;
+            @include sp{
+                font-size: 6vw;
+                left: 5%;
+            }
+        }
+    }
+    .messageTxt{
+        padding: 7px 17px 8px 19px;
+        font-size: 15px;
+        border-right: 1px solid #ddd;
+        border-left: 1px solid #ddd;
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+        background: #fff;
+        border: 2px solid #6fb0ce;
+        border-radius: 0 30px 30px 30px;
+        color: #000;
+        max-width: 46%;
+        margin-left: 5.3%;
+        margin-top: 8px;
+        display: inline-block;
+        @include sp{
+            padding: 0.4em 1.0rem 0.5rem 1.0rem;
+            max-width: 63%;
+            margin-left: 8.3%;
+            margin-top: 1%;
+        }
+    }
+    .mymessageTxt{
+        padding: 7px 17px 6px 19px;
+        font-size: 15px;
+        border-right: 1px solid #ddd;
+        border-left: 1px solid #ddd;
+        box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.2);
+        background: #6fb0ce;
+        border: 2px solid #6fb0ce;
+        color: #000;
+        max-width: 46%;
+        margin-top: 20px;
+        display: inline-block;
+        text-align: left;
+        color: #fff;
+        margin-right: 3%;
+        margin-left: auto;
+        border-radius: 30px 30px 0px 30px;
+        @include sp{
+            padding: 0.5em 1.0rem 0.4rem 1.0rem;
+            max-width: 63%;
+            margin-left: 8.3%;
+            margin-top: 0;
+        }
+    }
+}
